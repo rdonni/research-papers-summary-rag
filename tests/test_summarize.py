@@ -2,7 +2,7 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from instadeep_technical_test.summarize import (
+from src.summarize import (
     build_summarize_chain,
     extract_file_name_from_path,
     format_results,

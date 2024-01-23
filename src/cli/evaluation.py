@@ -2,10 +2,10 @@ import os
 
 import click
 
-from instadeep_technical_test.api_key_management.extract_api_from_config import (
+from src.api_key_management.extract_api_from_config import (
     get_api_key,
 )
-from instadeep_technical_test.evaluation import evaluation
+from src.evaluation import evaluation
 
 
 @click.command()

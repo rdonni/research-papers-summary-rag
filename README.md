@@ -34,16 +34,16 @@ During this project I used the following features:
 ## 📂 Project structure
 Here is the structure of the source folder for my project:
 
-[instadeep_technical_test](instadeep_technical_test) :
-- [api_key_management](instadeep_technical_test/api_key_management)
-  - [__init__.py](instadeep_technical_test/api_key_management/__init__.py)
-  - [config.ini](instadeep_technical_test/api_key_management/config.ini): file where to write the openAI API key
-  - [extract_api_from_config.py](instadeep_technical_test/api_key_management/extract_api_from_config.py): This file contains a function to automatically extract the API key from config.ini
-- [evaluation.py](instadeep_technical_test/evaluation.py): This file contains the implementation of the evaluation pipeline
-- [faiss_database.py](instadeep_technical_test/faiss_database.py): This file permits the faiss index creation and saving
-- [streamlit_app.py](instadeep_technical_test/streamlit_app.py): This file builds the streamlit_app enabling to interact with the system
-- [summarize.py](instadeep_technical_test/summarize.py): This file contains all the generative part (instanciation of the llm model + generation of summaries )
-- [cli](instadeep_technical_test/cli): CLIs for the project
+[instadeep_technical_test](src) :
+- [api_key_management](src/api_key_management)
+  - [__init__.py](src/api_key_management/__init__.py)
+  - [config.ini](src/api_key_management/config.ini): file where to write the openAI API key
+  - [extract_api_from_config.py](src/api_key_management/extract_api_from_config.py): This file contains a function to automatically extract the API key from config.ini
+- [evaluation.py](src/evaluation.py): This file contains the implementation of the evaluation pipeline
+- [faiss_database.py](src/faiss_database.py): This file permits the faiss index creation and saving
+- [streamlit_app.py](src/streamlit_app.py): This file builds the streamlit_app enabling to interact with the system
+- [summarize.py](src/summarize.py): This file contains all the generative part (instanciation of the llm model + generation of summaries )
+- [cli](src/cli): CLIs for the project
 
 The command line interface for launching the project on the command line can be found in the cli folder.
 
@@ -71,7 +71,7 @@ Also, if we choose to retrieve too many papers for each of the queries in the ev
 I'll have to dig a little deeper to figure out how to fix this.
 
 ## ▶️ To run the code
-First of all, to be able to use the OpenAI API, you must add your personal API key in the [config.ini](instadeep_technical_test/api_key_management/config.ini) file.
+First of all, to be able to use the OpenAI API, you must add your personal API key in the [config.ini](src/api_key_management/config.ini) file.
 
 Once this is done, you must install the libraries used in the project via poetry:
 ```shell
@@ -91,12 +91,12 @@ poetry run pytest tests
 
 To launch the streamlit application, from the project root:
 ```shell
-poetry run -- streamlit run instadeep_technical_test/cli/main.py -- --faiss-index-path /your/path/to/faiss/index
+poetry run -- streamlit run src/cli/main.py -- --faiss-index-path /your/path/to/faiss/index
 ```
 A streamlit page will then open, simply press the submit button and wait a few tens of seconds to obtain the response from the model.
 
 
 To launch the evaluation pipeline, from the project root:
 ```shell
-poetry run python3 instadeep_technical_test/cli/evaluation.py --faiss-index-path /your/path/to/faiss/index --evaluation-results-path /your/path/to/results.json
+poetry run python3 src/cli/evaluation.py --faiss-index-path /your/path/to/faiss/index --evaluation-results-path /your/path/to/results.json
 ```

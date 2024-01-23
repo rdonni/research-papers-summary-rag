@@ -1,10 +1,10 @@
 import streamlit as st
 
-from instadeep_technical_test.api_key_management.extract_api_from_config import (
+from src.api_key_management.extract_api_from_config import (
     get_api_key,
 )
-from instadeep_technical_test.faiss_database import FaissVectorStore
-from instadeep_technical_test.summarize import (
+from src.faiss_database import FaissVectorStore
+from src.summarize import (
     format_results,
     generate_most_similar_papers_summaries,
 )

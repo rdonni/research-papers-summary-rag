@@ -2,8 +2,8 @@ import os
 
 import click
 
-from instadeep_technical_test.faiss_database import build_and_save_faiss_index
-from instadeep_technical_test.streamlit_app import build_streamlit_app
+from src.faiss_database import build_and_save_faiss_index
+from src.streamlit_app import build_streamlit_app
 
 
 @click.command()

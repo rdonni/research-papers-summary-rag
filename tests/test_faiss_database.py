@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from instadeep_technical_test.faiss_database import build_and_save_faiss_index
+from src.faiss_database import build_and_save_faiss_index
 
 
 def create_temp_file(directory, file_name, content):

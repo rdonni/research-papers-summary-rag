@@ -10,7 +10,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 
-from instadeep_technical_test.faiss_database import FaissVectorStore
+from src.faiss_database import FaissVectorStore
 
 LOGGER = logging.getLogger(__name__)
 

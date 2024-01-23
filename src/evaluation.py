@@ -14,8 +14,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from ragas.metrics import context_relevancy, faithfulness
 from ragas.metrics.critique import conciseness
 
-from instadeep_technical_test.faiss_database import build_and_save_faiss_index
-from instadeep_technical_test.summarize import (
+from src.faiss_database import build_and_save_faiss_index
+from src.summarize import (
     format_results,
     generate_most_similar_papers_summaries,
 )
