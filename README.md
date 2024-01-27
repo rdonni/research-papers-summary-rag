@@ -34,7 +34,7 @@ During this project I used the following features:
 ## 📂 Project structure
 Here is the structure of the source folder for my project:
 
-[instadeep_technical_test](src) :
+[src](src) :
 - [api_key_management](src/api_key_management)
   - [__init__.py](src/api_key_management/__init__.py)
   - [config.ini](src/api_key_management/config.ini): file where to write the openAI API key
